@@ -1,26 +1,34 @@
 # CALCULADORA DE IP
 # Desenvolvida por Bryann Locatelli - 3INFO1
 
+v = 0
+ip = ""
+while v == 0:
+    ip_classe = str(input("\033[1;32mInforme qual a classe da rede desejada \033[1;96m(A , B , C): "))
 
-classe = str(input('Digite a classe da rede (A, B, C): '))
-mascara = int(input('Digite a máscara de rede (em bits): '))
+    if ip_classe == 'A' or ip_classe == 'a':
+        bits_masc = ip[1:4]
+        ip = [ip[0]]
+        bits_ip = 8
+        v = 1
+    elif ip_classe == 'B' or ip_classe == 'b':
+        bits_masc = ip[2:4]
+        ip = ip[0:2]
+        bits_ip = 16
+        v = 1
+    elif ip_classe == 'C' or ip_classe == 'c':
+        bits_masc = [ip[-1]]
+        ip = ip[0:3]
+        bits_ip = 24
+        v = 1
+    else:
+        print('	\033[1;31mip_classe inválida!\033[0;0m')
+
+mascara = int(input("\033[1;32mInforme a máscara de rede em bits: \033[1;96mExemplo:\033[1;35m26  "))
 ip = [int(i) for i in input('Digite o endereço de IPV4 (separe por pontos): ').split('.')]
 print(ip)
 
-if classe == 'A' or classe == 'a':
-    bits_masc = ip[1:4]
-    ip = [ip[0]]
-    bits_ip = 8
-elif classe == 'B' or classe == 'b':
-    bits_masc = ip[2:4]
-    ip = ip[0:2]
-    bits_ip = 16
-elif classe == 'C' or classe == 'c':
-    bits_masc = [ip[-1]]
-    ip = ip[0:3]
-    bits_ip = 24
-else:
-    print('Classe inválida!')
+
 
 print(bits_masc)
 
