@@ -10,7 +10,7 @@ barrinha = "\033[1;33m=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 print(barrinha)                                                                                                                                              #
 print("              \033[1;31mCALCULADORA \033[1;32mDE \033[1;94mIP\033[0;0m")                                                                              #Cabeçalho
 print(emoji.emojize(":exploding_head:", language='alias'),"Desenvolvida por Bryann Locatelli - 3INFO1",emoji.emojize(":exploding_head:", language='alias'))  #
-print(barrinha) 
+print(barrinha)                                                                                                                                              #
 
 v = 0
 ip = []
@@ -23,7 +23,6 @@ while v == 0:
         if mascara <= 32:                                                                                                                                      #Verificação se a máscara de IP informada é válida
 
             ip = [int(i) for i in input('Digite o endereço de IPV4 (separe por pontos): ').split('.')]
-
 
             if ip_classe == 'A' or ip_classe == 'a':
                 bits_masc = ip[1:4]
@@ -45,7 +44,6 @@ while v == 0:
             print(emoji.emojize(":cross_mark:", language='alias'),'\033[1;31mMÁSCARA INVÁLIDA\033[0;0m',emoji.emojize(":cross_mark:", language='alias'))       
     else:
         print(emoji.emojize(":cross_mark:", language='alias'),'\033[1;31mCLASSE DE IP INVÁLIDA\033[0;0m',emoji.emojize(":cross_mark:", language='alias'))
-
 
 
 
