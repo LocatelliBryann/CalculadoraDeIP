@@ -17,10 +17,10 @@ ip = []
 while v == 0:
     ip_classe = str(input("\033[1;32mInforme qual a classe da rede desejada \033[1;96m(\033[1;35mA , B , C\033[1;96m) \033[1;32m=>\033[0;0m"))
 
-    if ip_classe == "A" or ip_classe == "a" or ip_classe == "B" or ip_classe == "b" or ip_classe == "C" or ip_classe == "c":   #Verificação se a classe de IP informada é válida (A, B ou C)
+    if ip_classe == "A" or ip_classe == "a" or ip_classe == "B" or ip_classe == "b" or ip_classe == "C" or ip_classe == "c":                                  #Verificação se a classe de IP informada é válida (A, B ou C)
         
         mascara = int(input("\033[1;32mInforme a máscara de rede em bits: \033[1;96mExemplo:\033[1;35m26 \033[1;32m=>\033[0;0m "))
-        if mascara <= 32:
+        if mascara <= 32:                                                                                                                                      #Verificação se a máscara de IP informada é válida
 
             ip = [int(i) for i in input('Digite o endereço de IPV4 (separe por pontos): ').split('.')]
 
@@ -42,9 +42,9 @@ while v == 0:
                 v = 1 
 
         else:
-            print('\033[1;31mMÁSCARA INVÁLIDA\033[0;0m')       
+            print(emoji.emojize(":cross_mark:", language='alias'),'\033[1;31mMÁSCARA INVÁLIDA\033[0;0m',emoji.emojize(":cross_mark:", language='alias'))       
     else:
-        print('\033[1;31mCLASSE DE IP INVÁLIDA\033[0;0m')
+        print(emoji.emojize(":cross_mark:", language='alias'),'\033[1;31mCLASSE DE IP INVÁLIDA\033[0;0m',emoji.emojize(":cross_mark:", language='alias'))
 
 
 
