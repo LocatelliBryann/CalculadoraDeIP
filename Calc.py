@@ -53,7 +53,6 @@ while v == 0:
     else:
         print(emoji.emojize(":cross_mark:", language='alias'),'\033[1;31mCLASSE DE IP INVÁLIDA\033[0;0m',emoji.emojize(":cross_mark:", language='alias'))
 
-print(mask_bits)
 
 bits_mascara = mask - ip_bits
 octetos = ceil(bits_mascara/8)
@@ -80,6 +79,7 @@ novo_ip = ip
 for item in lista_mascara:
     novo_ip.append(sum(item))
 novo_ip = [str(i) for i in novo_ip]
+
 
 
 print(f'Total de IPs: {2**bits_mascara}')
